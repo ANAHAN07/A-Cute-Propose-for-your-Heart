@@ -61,5 +61,5 @@ with st.expander("💌 Click here for a special message 💌"):
     st.write("I promise you, in every situation I will be next to you. 🥰")
     st.image("https://images.unsplash.com/photo-1582809620589-e9748fd04437?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", width=300)
 
-# Provide the correct file path for your audio file
-play_audio(r"D:/GITHUB Uploads/A-Cute-Propose-for-your-Heart/Run this file/Ed Sheeran - Perfect.mp3")
+
+play_audio("./Run this file/Ed Sheeran - Perfect.mp3")
