@@ -59,6 +59,10 @@ The website features:
 4. Access the Website Open your browser and go to the provided local address (e.g., http://localhost:8501) to view the proposal website.
 
 ---
+# OR
+
+   Just provide this link to your loved one ["LINK"](https://i-love-youu.streamlit.app)
+
 
 ## Customization
   Love Letter: Edit the love_letter.py file to personalize the love letter message.
