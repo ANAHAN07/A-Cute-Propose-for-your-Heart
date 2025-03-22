@@ -4,19 +4,22 @@ import time
 import base64
 
 def play_audio(file_path):
-    with open(file_path, "rb") as f:
-        audio_bytes = f.read()
-    b64 = base64.b64encode(audio_bytes).decode()
-    audio_html = f"""
-        <audio autoplay loop>
-        <source src="data:audio/mp3;base64,{b64}" type="audio/mp3">
-        </audio>
-    """
-    st.markdown(audio_html, unsafe_allow_html=True)
+    try:
+        with open(file_path, "rb") as f:
+            audio_bytes = f.read()
+        b64 = base64.b64encode(audio_bytes).decode()
+        audio_html = f"""
+            <audio autoplay loop>
+            <source src="data:audio/mp3;base64,{b64}" type="audio/mp3">
+            </audio>
+        """
+        st.markdown(audio_html, unsafe_allow_html=True)
+    except FileNotFoundError:
+        st.error(f"Oops! The file '{file_path}' was not found. Please make sure the file path is correct.")
 
 st.set_page_config(page_title="I 💖 You", page_icon="💍")
 
-st.title("💖 Will You Be My Love? 💖") 
+st.title("💖 Will You Be My Love? 💖")
 st.write("No matter where life takes us, as long as I'm with you, I'll be home.✨✨")
 st.image("https://images.unsplash.com/photo-1610936534941-022318669958?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", width=400)
 
@@ -58,4 +61,5 @@ with st.expander("💌 Click here for a special message 💌"):
     st.write("I promise you, in every situation I will be next to you. 🥰")
     st.image("https://images.unsplash.com/photo-1582809620589-e9748fd04437?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", width=300)
 
-play_audio("Ed Sheeran - Perfect.mp3")
+# Provide the correct file path for your audio file
+play_audio(r"D:/GITHUB Uploads/A-Cute-Propose-for-your-Heart/Run this file/Ed Sheeran - Perfect.mp3")
